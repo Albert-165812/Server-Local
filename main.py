@@ -15,8 +15,10 @@ def emit_server(task, place, content):
 @sio.event
 def message_client_local(data):
     if (data["task"] == "TexttoController"):
-        text = data["content"]
-        print('message received with ', data, text)
+        if (data["content"] != None):
+            text = data["content"]
+            print('message received with ', data, text)
+            emit_server("TextoControllerWeb", "page_home", text)
 
 
 @sio.event
