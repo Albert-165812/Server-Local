@@ -33,5 +33,5 @@ def disconnect():
     emit_server("Notification", "none", "disconnect to server")
 
 
-sio.connect('http://192.168.1.63:6868/', wait_timeout=10)
+sio.connect('http://192.168.0.107:6868/', wait_timeout=10)
 sio.wait()
