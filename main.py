@@ -10,6 +10,7 @@ def emit_server(task, place, content):
         "content": content
     }
     sio.emit("server_client_local", data)
+    
 
 
 @sio.event
@@ -19,7 +20,6 @@ def message_client_local(data):
             text = data["content"]
             print('message received with ', data, text)
             emit_server("TextoControllerWeb", "page_home", text)
-
 
 @sio.event
 def connect():
@@ -33,5 +33,5 @@ def disconnect():
     emit_server("Notification", "none", "disconnect to server")
 
 
-sio.connect('http://192.168.0.107:6868/', wait_timeout=10)
+sio.connect('http://192.168.1.6:6868/', wait_timeout=10)
 sio.wait()
