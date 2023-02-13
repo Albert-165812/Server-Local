@@ -1,8 +1,8 @@
 Các hàm sử dụng 
- -- Các fuction controller từ phía client local để điều khiển client website thực hiện --
+-- Các fuction controller từ phía client local để điều khiển client website thực hiện --
     ----Hàm khái quát----
 emit_server(task, place, content)
-        ----Ghi chú----
+        --Ghi chú--
 
 task: là nhiệm vụ cần điều khiển:
     task = TextoControllerWeb ("dùng để điều khiển những nội dung trong web client bằng text")
